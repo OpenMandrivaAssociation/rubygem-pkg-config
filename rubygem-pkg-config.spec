@@ -4,13 +4,14 @@
 Summary:	A pkg-config implementation for Ruby
 Name:		rubygem-%{rbname}
 
-Version:	1.1.4
-Release:	7
+Version:	1.1.5
+Release:	1
 Group:		Development/Ruby
 License:	GPLv2+ or Ruby
 URL:		https://github.com/rcairo/pkg-config
 Source0:	http://rubygems.org/gems/%{rbname}-%{version}.gem
-BuildRequires:	rubygems 
+BuildRequires:	rubygems
+BuildRequires:	ruby-psych
 BuildArch:	noarch
 
 %description
@@ -36,17 +37,14 @@ Documents, RDoc & RI documentation for %{name}.
 %gem_install
 
 %files
-#%dir %{ruby_gemdir}/gems/%{rbname}-%{version}
-%dir %{ruby_gemdir}/gems/%{rbname}-%{version}/lib
-%{ruby_gemdir}/gems/%{rbname}-%{version}/lib/*.rb
-%dir %{ruby_gemdir}/gems/%{rbname}-%{version}/lib/pkg-config
-%{ruby_gemdir}/gems/%{rbname}-%{version}/lib/pkg-config/*.rb
-#%dir %{ruby_gemdir}/gems/%{rbname}-%{version}/test
-#%{ruby_gemdir}/gems/%{rbname}-%{version}/test/*.rb
-%{ruby_gemdir}/specifications/%{rbname}-%{version}.gemspec
+%dir %{gem_dir}/gems/%{rbname}-%{version}/lib
+%{gem_dir}/gems/%{rbname}-%{version}/lib/*.rb
+%dir %{gem_dir}/gems/%{rbname}-%{version}/lib/pkg-config
+%{gem_dir}/gems/%{rbname}-%{version}/lib/pkg-config/*.rb
+%{gem_dir}/specifications/%{rbname}-%{version}.gemspec
 
 %files doc
-%doc %{ruby_gemdir}/doc/%{rbname}-%{version}
+%doc %{gem_dir}/doc/%{rbname}-%{version}
 
 %changelog
 
