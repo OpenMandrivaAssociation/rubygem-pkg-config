@@ -5,7 +5,7 @@ Summary:	A pkg-config implementation for Ruby
 Name:		rubygem-%{rbname}
 
 Version:	1.1.5
-Release:	1
+Release:	2
 Group:		Development/Ruby
 License:	GPLv2+ or Ruby
 URL:		https://github.com/rcairo/pkg-config
