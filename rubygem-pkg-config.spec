@@ -34,7 +34,7 @@ Documents, RDoc & RI documentation for %{name}.
 #nothing
 
 %install
-%gem_install
+%gem_install -n %{SOURCE0}
 
 %files
 %dir %{gem_dir}/gems/%{rbname}-%{version}/lib
