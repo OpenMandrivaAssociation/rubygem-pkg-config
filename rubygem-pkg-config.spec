@@ -31,7 +31,7 @@ Documents, RDoc & RI documentation for %{name}.
 %setup -q -c -T
 
 %build
-%gem_build
+#nothing
 
 %install
 %gem_install
