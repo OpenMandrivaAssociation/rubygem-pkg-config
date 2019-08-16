@@ -37,11 +37,11 @@ Documents, RDoc & RI documentation for %{name}.
 %gem_install -n %{SOURCE0}
 
 %files
-%dir %{gem_dir}/gems/%{rbname}-%{version}/lib
+#dir #{gem_dir}/gems/%{rbname}-%{version}/lib
 %{gem_dir}/gems/%{rbname}-%{version}/lib/*.rb
-%dir %{gem_dir}/gems/%{rbname}-%{version}/lib/pkg-config
-%{gem_dir}/gems/%{rbname}-%{version}/lib/pkg-config/*.rb
-%{gem_dir}/specifications/%{rbname}-%{version}.gemspec
+#dir #{gem_dir}/gems/%{rbname}-%{version}/lib/pkg-config
+#{gem_dir}/gems/%{rbname}-%{version}/lib/pkg-config/*.rb
+#{gem_dir}/specifications/%{rbname}-%{version}.gemspec
 
 %files doc
 %doc %{gem_dir}/doc/%{rbname}-%{version}
