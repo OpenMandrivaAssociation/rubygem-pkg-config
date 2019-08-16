@@ -38,7 +38,7 @@ Documents, RDoc & RI documentation for %{name}.
 
 %files
 #dir #{gem_dir}/gems/%{rbname}-%{version}/lib
-%{gem_dir}/gems/%{rbname}-%{version}/lib/*.rb
+#{gem_dir}/gems/%{rbname}-%{version}/lib/*.rb
 #dir #{gem_dir}/gems/%{rbname}-%{version}/lib/pkg-config
 #{gem_dir}/gems/%{rbname}-%{version}/lib/pkg-config/*.rb
 #{gem_dir}/specifications/%{rbname}-%{version}.gemspec
