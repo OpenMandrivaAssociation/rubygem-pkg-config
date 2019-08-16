@@ -10,6 +10,9 @@ Group:		Development/Ruby
 License:	GPLv2+ or Ruby
 URL:		https://github.com/rcairo/pkg-config
 Source0:	http://rubygems.org/gems/%{rbname}-%{version}.gem
+BuildRequires:  pkgconfig(ruby)
+BuildRequires:  pkgconfig(cairo)
+BuildRequires:  ruby
 BuildRequires:	rubygems-devel
 BuildRequires:	ruby-psych
 BuildArch:	noarch
