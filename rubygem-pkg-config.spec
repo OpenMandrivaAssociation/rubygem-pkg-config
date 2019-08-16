@@ -4,7 +4,7 @@
 Summary:	A pkg-config implementation for Ruby
 Name:		rubygem-%{rbname}
 
-Version:	1.3.2
+Version:	1.3.8
 Release:	1
 Group:		Development/Ruby
 License:	GPLv2+ or Ruby
