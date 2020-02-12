@@ -3,7 +3,7 @@
 %define gem_name pkg-config
 
 Summary:	A pkg-config implementation for Ruby
-Name:		rubygem-%{rbname}
+Name:		rubygem-%{gem_name}
 
 Version:	1.4.1
 Release:	1
@@ -61,6 +61,6 @@ cp -a .%{gem_dir}/* \
 %doc	%{gem_dir}/gems/%{gem_name}-%{version}/[A-Z]*
 
 %files doc
-%doc %{gem_dir}/doc/%{rbname}-%{version}
+%doc %{gem_dir}/doc/%{gem_name}-%{version}
 
 
