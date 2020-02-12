@@ -1,10 +1,11 @@
 # Generated from pkg-config-1.1.4.gem by gem2rpm5 -*- rpm-spec -*-          
-%define	rbname	pkg-config
+
+%define gem_name pkg-config
 
 Summary:	A pkg-config implementation for Ruby
 Name:		rubygem-%{rbname}
 
-Version:	1.3.8
+Version:	1.4.1
 Release:	1
 Group:		Development/Ruby
 License:	GPLv2+ or Ruby
@@ -33,18 +34,31 @@ Documents, RDoc & RI documentation for %{name}.
 %prep
 %setup -q -c -T
 
+%gem_install -n %{SOURCE0}
+
 %build
 #nothing
 
 %install
-%gem_install -n %{SOURCE0}
+rm -rf %{buildroot}
+
+mkdir -p %{buildroot}%{gem_dir}
+
+cp -a .%{gem_dir}/* \
+    %{buildroot}/%{gem_dir}/
 
 %files
-%dir %{gem_dir}/gems/%{rbname}-%{version}/lib
-%{gem_dir}/gems/%{rbname}-%{version}/lib/*.rb
-%dir %{gem_dir}/gems/%{rbname}-%{version}/lib/pkg-config
-%{gem_dir}/gems/%{rbname}-%{version}/lib/pkg-config/*.rb
-%{gem_dir}/specifications/%{rbname}-%{version}.gemspec
+%dir %{gem_dir}/gems/%{gem_name}-%{version}/lib
+%{gem_dir}/gems/%{gem_name}-%{version}/lib/*.rb
+%dir %{gem_dir}/gems/%{gem_name}-%{version}/lib/pkg-config
+%{gem_dir}/gems/%{gem_name}-%{version}/lib/pkg-config/*.rb
+%{gem_dir}/specifications/%{gem_name}-%{version}.gemspec
+%{gem_dir}/gems/%{gem_name}-%{version}/test/*
+%{gem_dir}/cache/*
+%exclude	%{gem_dir}/gems/%{gem_name}-%{version}/Rakefile
+%exclude	%{gem_dir}/gems/%{gem_name}-%{version}/setup.rb
+
+%doc	%{gem_dir}/gems/%{gem_name}-%{version}/[A-Z]*
 
 %files doc
 %doc %{gem_dir}/doc/%{rbname}-%{version}
