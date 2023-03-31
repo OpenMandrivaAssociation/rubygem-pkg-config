@@ -1,7 +1,7 @@
 Summary:	A pkg-config implementation for Ruby
 Name:		rubygem-pkg-config
 Version:	1.4.6
-Release:	1
+Release:	2
 Group:		Development/Ruby
 License:	GPLv2+ or Ruby
 URL:		https://github.com/rcairo/pkg-config
